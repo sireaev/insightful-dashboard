@@ -1,0 +1,42 @@
+<div class="flex md:flex-row justify-center gap-10 flex-col items-center">
+    <mat-card class="example-card min-h-full w-[250px]">
+        <mat-card-title class="text-center text-blue-500 text-4xl">{{stats?.totalNumberOfEmployees || 0}}</mat-card-title>
+        <mat-card-content class="text-center min-h-[72px]">
+          <p>Total number of eployees</p>
+          <p>&nbsp;</p>
+        </mat-card-content>
+        <mat-card-footer *ngIf="!stats">
+          <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+        </mat-card-footer>
+      </mat-card>
+      <mat-card class="example-card h-full min-h-full w-[250px]">
+        <mat-card-title class="text-center text-green-700 text-4xl">{{stats?.totalClockedTime || 0}}</mat-card-title>
+        <mat-card-content class="text-center min-h-[72px]">
+          <p>Total Clocked in Time</p>
+          <p>&nbsp;</p>
+        </mat-card-content>
+        <mat-card-footer *ngIf="!stats">
+          <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+        </mat-card-footer>
+      </mat-card>
+      <mat-card class="example-card h-full min-h-full w-[250px] h-[150px]">
+        <mat-card-title class="text-center text-green-700 text-4xl">{{stats?.totalRegularHours || 0 | currency}}</mat-card-title>
+        <mat-card-content class="text-center">
+          <p>Total amount paid for regular hours</p>
+          <p>&nbsp;</p>
+        </mat-card-content>
+        <mat-card-footer *ngIf="!stats">
+          <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+        </mat-card-footer>
+      </mat-card>
+      <mat-card class="example-card h-full min-h-full w-[250px] h-[150px]">
+        <mat-card-title class="text-center text-green-700 text-4xl">{{stats?.totalOvertimeHours || 0 | currency}}</mat-card-title>
+        <mat-card-content class="text-center">
+          <p>Total overtime amount paid for overtime hours</p>
+          <p>&nbsp;</p>
+        </mat-card-content>
+        <mat-card-footer *ngIf="!stats">
+          <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+        </mat-card-footer>
+      </mat-card>
+</div>
